@@ -1,0 +1,299 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #0a0a0a;
+  color: white;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: black;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+nav a {
+  margin: 5px;
+  padding: 8px 12px;
+  text-decoration: none;
+  border-radius: 20px;
+  color: white;
+}
+
+/* COLORS BUTTONS */
+.fb { background: #1877f2; }
+.ig { background: #e1306c; }
+.wa { background: #25d366; }
+.call { background: #ffc107; color: black; }
+
+/* HERO */
+.hero {
+  height: 90vh;
+  background: url("images/hero.jpg") center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+  text-align: center;
+  background: rgba(0,0,0,0.6);
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.overlay button {
+  background: #007bff;
+  border: none;
+  padding: 12px 25px;
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+/* RESERVATION */
+.reservation {
+  padding: 40px;
+  text-align: center;
+}
+
+form {
+  max-width: 400px;
+  margin: auto;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: none;
+}
+
+form button {
+  width: 100%;
+  padding: 12px;
+  background: #ffc107;
+  border: none;
+  border-radius: 10px;
+}
+
+/* AVIS */
+.avis {
+  padding: 40px;
+  text-align: center;
+}
+
+.card {
+  background: #111;
+  margin: 15px auto;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+}
+.hero {
+  background-image: url("background.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+body {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+header {
+  animation: slideDown 0.6s ease-in-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+button {
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.08);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* click animation */
+button:active {
+  transform: scale(0.95);
+}
+section {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: appear 1s forwards;
+}
+
+@keyframes appear {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+a[href="#reservation"] {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+body {
+  cursor: pointer;
+}
+.footer {
+  text-align: center;
+  padding: 15px;
+  background: black;
+  color: white;
+  margin-top: 40px;
+  font-size: 14px;
+}
+.products-page {
+  padding: 40px;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.product {
+  background: #111;
+  padding: 15px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.product img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.product:hover {
+  transform: scale(1.05);
+}
+
+.product button {
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  background: #007bff;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.grid-big {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.product.big {
+  background: #111;
+  padding: 20px;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.product.big img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.product.big:hover {
+  transform: scale(1.05);
+}
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+
+  /* Navbar */
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav a {
+    margin: 5px;
+    font-size: 14px;
+  }
+
+  /* Hero */
+  .hero {
+    height: 60vh;
+  }
+
+  .overlay h1 {
+    font-size: 20px;
+  }
+
+  /* Products grid */
+  .grid, .grid-big {
+    grid-template-columns: 1fr;
+  }
+
+  /* Images */
+  .product img {
+    height: auto;
+  }
+
+  /* Buttons */
+  button {
+    width: 100%;
+  }
+
+  /* Form */
+  form {
+    width: 90%;
+  }
+}
+/* Buttons كبار باش يتضغطو بسهولة */
+button {
+  min-height: 45px;
+}
+
+/* مسافات مزيانة */
+section {
+  padding: 20px;
+}

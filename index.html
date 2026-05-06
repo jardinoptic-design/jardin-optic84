@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>JARDIN OPTIC</title>
+
+  <base href="https://jardinoptic-design.github.io/JARDIN OPTIC84/">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="logo">JARDIN OPTIC</div>
+
+  <nav>
+    <a href="#">ACCUEIL</a>
+    <a href="lunettes.html">LUNETTES</a>
+    <a href="#reservation">RÉSERVATION</a>
+    <a href="#avis">AVIS</a>
+
+    <a href="#" class="fb">FB</a>
+    <a href="https://www.instagram.com/jardinoptic2026/" class="ig">IG</a>
+    <a href="https://wa.me/212660877648" class="wa">WA</a>
+    <a href="tel:+212660877648" class="call">CALL</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="overlay">
+    <h1>Votre vision, notre priorité</h1>
+    <button onclick="scrollToReservation()">RÉSERVER</button>
+  </div>
+</section>
+
+<!-- RESERVATION -->
+<section id="reservation" class="reservation">
+  <h2>RÉSERVATION</h2>
+
+  <form onsubmit="sendWhatsApp(event)">
+    <input type="text" id="name" placeholder="Nom complet" required>
+    <input type="tel" id="phone" placeholder="Téléphone" required>
+    <input type="date" id="date" required>
+    <textarea id="message" placeholder="Message..."></textarea>
+
+    <button type="submit">Envoyer via WhatsApp</button>
+  </form>
+</section>
+
+<!-- AVIS -->
+<section id="avis" class="avis">
+  <h2>AVIS CLIENTS</h2>
+
+  <div class="card">
+    ⭐⭐⭐⭐⭐
+    <p>"Service rapide et professionnel."</p>
+    <span>- Youssef</span>
+  </div>
+
+  <div class="card">
+    ⭐⭐⭐⭐⭐
+    <p>"Large choix de lunettes et bon prix."</p>
+    <span>- Sara</span>
+  </div>
+
+  <div class="card">
+    ⭐⭐⭐⭐⭐
+    <p>"Très satisfait du service."</p>
+    <span>- Mehdi</span>
+  </div>
+
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
+<footer class="footer">
+  © 2026 JARDIN OPTIC
+</footer>
